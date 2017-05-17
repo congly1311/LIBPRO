@@ -1,0 +1,12 @@
+﻿  Source.cpp
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(292): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(322): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(347): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(375): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(495): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(522): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(549): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(576): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(677): warning C4101: 'ql': unreferenced local variable
+  LIBPRO.vcxproj -> C:\Users\Tuyen Doan\Downloads\LIBPRO-master (2)\LIBPRO-master\LIBPRO v1.4\Debug\LIBPRO.exe
+  LIBPRO.vcxproj -> C:\Users\Tuyen Doan\Downloads\LIBPRO-master (2)\LIBPRO-master\LIBPRO v1.4\Debug\LIBPRO.pdb (Full PDB)
