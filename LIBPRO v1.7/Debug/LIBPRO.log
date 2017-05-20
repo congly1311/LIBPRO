@@ -1,0 +1,22 @@
+﻿  Source.cpp
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(183): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(199): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(229): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(257): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(502): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(546): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(575): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(790): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(815): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(876): warning C4805: '==': unsafe mix of type 'boolean' and type 'bool' in operation
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(318): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(354): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(379): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(408): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(592): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(619): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(646): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(673): warning C4101: 'ql': unreferenced local variable
+c:\users\tuyen doan\downloads\libpro-master (2)\libpro-master\libpro v1.4\source.cpp(792): warning C4101: 'ql': unreferenced local variable
+  LIBPRO.vcxproj -> C:\Users\Tuyen Doan\Downloads\LIBPRO-master (2)\LIBPRO-master\LIBPRO v1.4\Debug\LIBPRO.exe
+  LIBPRO.vcxproj -> C:\Users\Tuyen Doan\Downloads\LIBPRO-master (2)\LIBPRO-master\LIBPRO v1.4\Debug\LIBPRO.pdb (Full PDB)
