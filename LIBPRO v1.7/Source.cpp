@@ -455,48 +455,7 @@ int Chucnang(int ndht, boolean admin , NguoiDung ngDung[], int quyen, int &m, Qu
 			Sleep(2000);
 		}
 	}
-//#########Quyen 7. Muon sach ################################################
-
-	else if (quyen == 7) {
-		if (ngDung[ndht].chucVu == 3) {
-			system("cls");
-			int idsach;
-			int choose;
-			fstream inFile("Sach.DAT", ios::in);
-			int sl = TruyXuatSach(sach);
-			cout << "Nhap ID sach can tim: ";
-			cin >> idsach; cin.ignore();
-			for (int i = 0; i < sl; i++) {
-				if (idsach == sach[i].ID) {
-					cout << "Sach duoc tim thay: " << sach[i].tensach << endl;
-					if (sach[i].trangthai == 0)cout << "Sach da co nguoi muon. Vui long muon sach khac!!!" << endl;
-					if (sach[i].trangthai == 1) {
-						cout << "Ban co muon muon sach: " << endl;
-						cout << "1. Co" << endl;
-						cout << "2. Khong" << endl;
-						cin >> choose; cin.ignore();
-						if (choose == 0)break;
-						if (choose == 1) {
-							fstream inFile("MuonSach.DAT", ios::app);
-
-							cout << "Muon sach thanh cong. Vui long vao balo de kiem tra" << endl;
-						}
-					}
-				}
-			}
-			inFile.close();
-			Sleep(1311);
-		}
-		else {
-			cout << "Ban khong duoc ho tro chuc nang nay" << endl;
-			Sleep(2000);
-		}
-	}
-	//#######Quyen 9. Xem balo########################################################################
-
-	
-
-	//#######Quyen 10. Doi mat khau###########################################################################
+//#########Quyen 10. Doi mat khau ################################################
 
 	else if (quyen == 10) {
 		if (ngDung[ndht].chucVu == 1 || ngDung[ndht].chucVu == 2 || ngDung[ndht].chucVu == 3||admin==true) {
