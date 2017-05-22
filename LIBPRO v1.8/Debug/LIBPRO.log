@@ -1,0 +1,23 @@
+﻿Build started 5/22/2017 10:50:01 AM.
+     1>Project "C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\LIBPRO\LIBPRO.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
+         Source.cpp
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(275): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(431): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(461): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(486): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(515): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(820): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(847): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(878): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(909): warning C4101: 'ql' : unreferenced local variable
+     1>c:\users\congly\documents\visual studio 2013\projects\libpro\libpro\source.cpp(1049): warning C4101: 'ql' : unreferenced local variable
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\Debug\LIBPRO.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\Debug\LIBPRO.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\Debug\LIBPRO.lib" /MACHINE:X86 Debug\Source.obj
+         LIBPRO.vcxproj -> C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\Debug\LIBPRO.exe
+     1>Done Building Project "C:\Users\CongLy\documents\visual studio 2013\Projects\LIBPRO\LIBPRO\LIBPRO.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.45
