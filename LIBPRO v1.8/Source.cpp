@@ -175,16 +175,6 @@ int TruyXuatSach(Sach v[]) {
 	inFile.close();
 	return dem - 1;
 }
-int TruyXuatQuyen(Quyen v[]) {
-	fstream inFile("Quyen.DAT", ios::in);
-	int dem = 0;
-	while (!inFile.eof()) {
-		v[dem].doc(inFile);
-		dem++;
-	}
-	inFile.close();
-	return dem - 1;
-}
 int TruyXuatMuonSach(MuonSach v[]) {
 	fstream inFile("MuonSach.DAT", ios::in);
 	int dem = 0;
@@ -1147,9 +1137,6 @@ int main() {
 	//*/
 	///*
 	Quyen quyen[30];
-	int slq = TruyXuatQuyen(quyen);
-	cout << slq << endl;
-	/*fstream o("QUyen.DAT", ios::app);
 	quyen[0].stt = 0; quyen[0].Admin = 1; strcpy(quyen[0].tenQuyen, "Them nguoi dung.");
 	quyen[1].stt = 1; quyen[1].Admin = 1; strcpy(quyen[1].tenQuyen, "Khoa nguoi dung.");
 	quyen[2].stt = 2; quyen[2].Admin = 1; strcpy(quyen[2].tenQuyen, "Mo khoa nguoi dung.");
@@ -1171,9 +1158,6 @@ int main() {
 	quyen[18].stt = 18; quyen[18].Admin = quyen[18].ThuThu = 1; strcpy(quyen[18].tenQuyen, "Xem danh sach tai khoan.");
 	quyen[19].stt = 19; quyen[19].Admin = quyen[19].ThuThu = quyen[19].DocGia = 1; strcpy(quyen[19].tenQuyen, "Sua thong tin tai khoan.");
 	quyen[20].stt = 20; quyen[20].Admin = quyen[20].ThuThu = quyen[20].DocGia = 1; strcpy(quyen[20].tenQuyen, "Dang xuat.");
-	for (int i = 0; i < 21; i++){
-		quyen[i].ghi(o);
-	}*/
 	/*
 	fstream inFile("Quyen.DAT", ios::in);
 	int dem=0;
@@ -1257,7 +1241,7 @@ int main() {
 						cout << "|________________________________________________________________|" << endl;
 						cout << "|             ################ Menu #################            |" << endl;
 						cout << "|________________________________________________________________|" << endl;
-						for (k = 0; k< slq; k++) {
+						for (k = 0; k<21; k++) {
 							if (quyen[k].Admin == 1) {
 								cout << setw(5) << left << "|";
 								cout << setw(2) << right << quyen[k].stt << ". "
@@ -1276,7 +1260,7 @@ int main() {
 						cout << "|________________________________________________________________|" << endl;
 						cout << "|             ################ Menu #################            |" << endl;
 						cout << "|________________________________________________________________|" << endl;
-						for (k = 0; k<slq; k++) {
+						for (k = 0; k<21; k++) {
 							if (quyen[k].ThuThu == 1) {
 								cout << setw(5) << left << "|";
 								cout << setw(2) << right << quyen[k].stt << ". "
@@ -1295,7 +1279,7 @@ int main() {
 						 cout << "|________________________________________________________________|" << endl;
 						 cout << "|             ################ Menu #################            |" << endl;
 						 cout << "|________________________________________________________________|" << endl;
-						 for (k = 0; k<slq; k++) {
+						 for (k = 0; k<21; k++) {
 							 if (quyen[k].DocGia == 1) {
 								 cout << setw(5) << left << "|";
 								 cout << setw(2) << right << quyen[k].stt << ". "
