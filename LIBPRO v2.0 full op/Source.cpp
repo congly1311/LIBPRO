@@ -226,7 +226,12 @@ int TruyXuatThongBao(ThongBao v[]) {
 void CapNhatNgDung(NguoiDung v[]) {
 	int m;
 	fstream outFile("UserData.DAT", ios::app);
-	cout << "Nhap so luong:"; cin >> m;
+	do {
+		cin.clear();
+		cin.ignore(80, '\n');
+		cout << "Nhap So Luong :";
+	} while (!(cin >> m) || m != (int)m);
+	cin.ignore();
 	for (int i = 0; i<m; i++) {
 		cout << "Nhap Du lieu Nguoi thu " << i + 1 << " :" << endl;
 		v[i].nhap();
