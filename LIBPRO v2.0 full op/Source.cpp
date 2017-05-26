@@ -98,14 +98,14 @@ class NguoiDung {
 private:
 public:
 	char MasoNguoiDung[5];
-	int sCMND;
+	double sCMND;
 	char tenNguoiDung[30];
 	char ngaySinh[15];
 	char diaChi[50];
 	char tenDangNhap[30];
 	char MatKhau[20];
 	bool trangThai = 1;
-	int chucVu;
+	double chucVu;
 	int dem = 0;
 	void doc(fstream&);
 	void ghi(fstream&);
@@ -118,12 +118,33 @@ void NguoiDung::nhap() {
 		cout << "Nhap so CMND :";
 	} while (!(cin >> sCMND) || sCMND != (int)sCMND);
 	cin.ignore();
-	cout << "Nhap ho ten: "; cin.getline(tenNguoiDung, 30);
-	cout << "Nhap ngay sinh: "; cin.getline(ngaySinh, 12);
-	cout << "Nhap dia chi: "; cin.getline(diaChi, 20);
-	cout << "Nhap ten Tai khoan: "; cin.getline(tenDangNhap, 30);
-	cout << "Nhap Mat khau: "; cin.getline(MatKhau, 20);
-	cout << "Nhap ma Chuc Vu: "; cin >> chucVu;
+
+	do {
+		cout << "Nhap Ho Ten: "; cin.getline(tenNguoiDung, 30);
+		if (strcmp(tenNguoiDung, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
+	} while (strcmp(tenNguoiDung, "")==0);
+
+	do {
+		cout << "Nhap Ngay Sinh: "; cin.getline(ngaySinh, 30);
+		if (strcmp(ngaySinh, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
+	} while (strcmp(ngaySinh, "") == 0);
+
+	do {
+		cout << "Nhap Ten Tai Khoan: "; cin.getline(tenDangNhap, 30);
+		if (strcmp(tenDangNhap, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
+	} while (strcmp(tenDangNhap, "") == 0); 
+
+	do {
+		cout << "Nhap Mat khau: "; cin.getline(MatKhau, 30);
+		if (strcmp(MatKhau, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
+	} while (strcmp(MatKhau, "") == 0);
+	cout << "Nhap Ma Chuc Vu (1: Adminstration , 2: Thu Thu , 3:Doc Gia):";
+	while (!(cin >> chucVu) || chucVu != (int)chucVu) {
+		cin.clear();
+		cin.ignore();
+		cout << "Nhap Ma Chuc Vu (1: Adminstration , 2: Thu Thu , 3:Doc Gia):";
+	} ;
+	cin.ignore();
 };
 void NguoiDung::ghi(fstream &ofs) {
 	ofs.write(reinterpret_cast< const char * > (this), sizeof(NguoiDung));
