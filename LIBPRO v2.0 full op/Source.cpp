@@ -1260,6 +1260,7 @@ int main() {
 			}
 		} while (kt != 1);
 		do {
+			int ch=0;
 			system("cls");
 			switch (chucvu) {
 			case 1: {
@@ -1277,8 +1278,14 @@ int main() {
 							}
 						}
 						cout << "|________________________________________________________________|" << endl;
+				while(ch==0){
 						cout << "Nhap Lua chon: "; cin >> op;
+						if (quyen[op].Admin == 1) {
 						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+						ch = 1;
+					}
+					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+				}
 						break;
 			}
 			case 2: {
@@ -1296,8 +1303,14 @@ int main() {
 							}
 						}
 						cout << "|________________________________________________________________|" << endl;
+				while(ch==0){
 						cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
+					if (quyen[op].ThuThu == 1) {
 						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+						ch = 1;
+					}
+					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+				}
 						break;
 			}
 			default: {
@@ -1315,8 +1328,14 @@ int main() {
 							 }
 						 }
 						 cout << "|________________________________________________________________|" << endl;
-						 cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
-						 kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+				while(ch==0){
+						cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
+						if (quyen[op].DocGia == 1) {
+						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+						ch = 1;
+					}
+					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+				}
 						 break;
 			}
 			}
