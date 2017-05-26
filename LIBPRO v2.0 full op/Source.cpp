@@ -471,10 +471,13 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		int op;
 		fstream inFile("Sach.DAT", ios::in);
 		int s = TruyXuatSach(sach);
-		cout << "Chon cach tim kiem: " << endl;
-		cout << "1. Tim theo ID." << endl;
-		cout << "2. Tim theo ten sach." << endl;
-		cout << "3. Tim theo ten tac gia." << endl;
+		cout << "_______________________________________________________________________________________" << endl;
+		cout << "|                                Chon cach tim kiem:                                   |" << endl;
+		cout << "|______________________________________________________________________________________|" << endl;
+		cout << "|                                1. Tim theo ID                                        |" << endl;
+		cout << "|                                2. Tim theo ten sach                                  |" << endl;
+		cout << "|                                3. Tim theo ten tac gia                               |" << endl;
+		cout << "|______________________________________________________________________________________|" << endl;
 		cout << "Nhap lua chon: "; cin >> op; cin.ignore();
 		switch (op){
 		case 1:{
@@ -828,11 +831,14 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		int op;
 		fstream inFile("UserData.DAT", ios::in);
 		int m = TruyXuatNgDung(ngDung);
-		cout << "Chon cach tim kiem: " << endl;
-		cout << "1. Tim theo ID." << endl;
-		cout << "2. Tim theo ten." << endl;
-		cout << "3. Tim theo Dia chi." << endl;
-		cout << "4. Tim theo ngay sinh." << endl;
+		cout << "___________________________________________________________________________________________________" << endl;
+		cout << "|                                        Chon cach tim kiem:                                      |" << endl;
+		cout << "|_________________________________________________________________________________________________|" << endl;
+		cout << "|                                         1. Tim theo ID.                                         |" << endl;
+		cout << "|                                         2. Tim theo ten.                                        |" << endl;
+		cout << "|                                         3. Tim theo Dia chi.                                    |" << endl;
+		cout << "|                                         4. Tim theo ngay sinh.                                  |" << endl;
+		cout << "|_________________________________________________________________________________________________|" << endl;
 
 		cout << "Nhap lua chon: "; cin >> op; cin.ignore();
 		switch (op){
@@ -1106,12 +1112,15 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		int luachon;
 		int sl = TruyXuatNgDung(ngDung);
 		fstream outFile("UserData.DAT", ios::out);
-		cout << "Chon thong tin ban muon thay doi" << endl;
-		cout << "1. So CMND" << endl;
-		cout << "2. Ten nguoi dung" << endl;
-		cout << "3. Ngay sinh" << endl;
-		cout << "4. Dia chi" << endl;
-		cout << "5. Ten tai khoan" << endl;
+		cout << "_____________________________________________________________________________________________________________" << endl;
+		cout << "|                                      Chon thong tin ban muon thay doi                                     |" << endl;
+		cout << "|___________________________________________________________________________________________________________|" << endl;
+		cout << "|                                          1. So CMND                                                       |" << endl;
+		cout << "|                                          2. Ten nguoi dung                                                |"<< endl;
+		cout << "|                                          3. Ngay sinh                                                     |" << endl;
+		cout << "|                                          4. Dia chi                                                       |" << endl;
+		cout << "|                                          5. Ten tai khoan                                                 |" << endl;
+		cout << "|___________________________________________________________________________________________________________|" << endl;
 		cout << "Nhap lua chon: ";
 		cin >> luachon; cin.ignore();
 		switch (luachon)
