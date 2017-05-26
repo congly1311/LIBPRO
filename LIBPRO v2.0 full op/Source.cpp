@@ -128,7 +128,10 @@ void NguoiDung::nhap() {
 		cout << "Nhap Ngay Sinh: "; cin.getline(ngaySinh, 30);
 		if (strcmp(ngaySinh, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
 	} while (strcmp(ngaySinh, "") == 0);
-
+	do {
+		cout << "Nhap Dia Chi: "; cin.getline(diaChi, 15);
+		if (strcmp(diaChi, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
+	} while (strcmp(diaChi, "") == 0);
 	do {
 		cout << "Nhap Ten Tai Khoan: "; cin.getline(tenDangNhap, 30);
 		if (strcmp(tenDangNhap, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
@@ -144,7 +147,6 @@ void NguoiDung::nhap() {
 		cin.ignore();
 		cout << "Nhap Ma Chuc Vu (1: Adminstration , 2: Thu Thu , 3:Doc Gia):";
 	} ;
-	cin.ignore();
 };
 void NguoiDung::ghi(fstream &ofs) {
 	ofs.write(reinterpret_cast< const char * > (this), sizeof(NguoiDung));
