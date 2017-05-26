@@ -1077,17 +1077,20 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	else if (quyen == 18) {
 		system("cls");
 		char ql;
-		cout << setw(15) << left << "So CMND" << setw(30) << left << "Ho va ten" << setw(15) << left << "Ngay sinh" << setw(30) << left << "Dia chi" << setw(15) << left << "Chuc vu" << setw(15) << left << "Trang thai" << endl;
+		cout << " ____________________________________________________________________________________________________________________" << endl;
+		cout <<"|"<< setw(13) << left << "So CMND" <<"|"<< setw(28) << left << "Ho va ten" <<"|"<< setw(15) << left << "Ngay sinh" <<"|"<< setw(20) << left << "Dia chi" <<"|"<< setw(20) << left << "Chuc vu" <<"|"<< setw(15) << left << "Trang thai" <<"|"<< endl;
+		cout << "|_____________|____________________________|_______________|____________________|____________________|_______________|" << endl;
 		m = TruyXuatNgDung(ngDung);
 		for (int i = 0; i < m; i++) {
-			cout << setw(15) << left << ngDung[i].sCMND << setw(30) << left << ngDung[i].tenNguoiDung << setw(15) << left << ngDung[i].ngaySinh << setw(30) << left << ngDung[i].diaChi << setw(15) << left;
-			if (ngDung[i].chucVu == 1) cout << "Administration";
-			else if (ngDung[i].chucVu == 2) cout << "Thu Thu";
-			else cout << "Doc Gia";
+			cout <<"|"<< setw(13) << left << ngDung[i].sCMND <<"|"<< setw(28) << left << ngDung[i].tenNguoiDung <<"|"<< setw(15) << left << ngDung[i].ngaySinh <<"|"<< setw(20) << left << ngDung[i].diaChi <<"|"<< setw(20) << left;
+			if (ngDung[i].chucVu == 1) cout << "Administration"<<"|";
+			else if (ngDung[i].chucVu == 2) cout << "Thu Thu"<<"|";
+			else cout << "Doc Gia"<<"|";
 			cout << setw(15) << left;
-			if (ngDung[i].trangThai == 1) cout << "Hoat Dong" << endl;
-			else cout << "Bi khoa" << endl;
-		}
+			if (ngDung[i].trangThai == 1) cout << "Hoat Dong" << "|"<<endl;
+			else cout << "Bi khoa" <<"|"<< endl;
+			}
+		cout << "|_____________|____________________________|_______________|____________________|____________________|_______________|" << endl;
 		system("pause");
 	}
 	//############Quyen 19. Sua thong tin tai khoan ##########################################################
