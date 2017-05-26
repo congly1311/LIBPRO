@@ -468,7 +468,7 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 //sua giao dien nghia
 	else if (quyen == 5) {
 		system("cls");
-		int op;
+		double op;
 		fstream inFile("Sach.DAT", ios::in);
 		int s = TruyXuatSach(sach);
 		cout << "_______________________________________________________________________________________" << endl;
@@ -478,8 +478,14 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		cout << "|                                2. Tim theo ten sach                                  |" << endl;
 		cout << "|                                3. Tim theo ten tac gia                               |" << endl;
 		cout << "|______________________________________________________________________________________|" << endl;
-		cout << "Nhap lua chon: "; cin >> op; cin.ignore();
-		switch (op){
+		cout << "Nhap Lua Chon :"<<endl;
+			do {
+				cin.clear();
+				cin.ignore(80, '\n');
+				cout << "Nhap Lua Chon :";
+			} while (!(cin >> op) || op!= (int)op);
+			cin.ignore();
+		switch ((int)op){
 		case 1:{
 				   system("cls");
 				   int id;
