@@ -465,14 +465,14 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	}
 
 	//#######Quyen 5. Tim sach ##############################################################################
-
+//sua giao dien nghia
 	else if (quyen == 5) {
 		system("cls");
 		int op;
 		fstream inFile("Sach.DAT", ios::in);
 		int s = TruyXuatSach(sach);
 		cout << "_______________________________________________________________________________________" << endl;
-		cout << "|                                Chon cach tim kiem:                                   |" << endl;
+		cout << "|##################################TIM KIEM SACH#######################################|" << endl;
 		cout << "|______________________________________________________________________________________|" << endl;
 		cout << "|                                1. Tim theo ID                                        |" << endl;
 		cout << "|                                2. Tim theo ten sach                                  |" << endl;
@@ -825,14 +825,14 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	}
 
 	//########## quyen 13. Tim kiem tai khoan ###############################################################
-
+//nghia sua gd
 	else if (quyen == 13) {
 		system("cls");
 		int op;
 		fstream inFile("UserData.DAT", ios::in);
 		int m = TruyXuatNgDung(ngDung);
 		cout << "___________________________________________________________________________________________________" << endl;
-		cout << "|                                        Chon cach tim kiem:                                      |" << endl;
+		cout << "|,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,-,TIM KIEM TAI KHOAN,-,-,-,-,-,-,-,-,-,-,-,-,-,-,--,-,-,-,--|" << endl;
 		cout << "|_________________________________________________________________________________________________|" << endl;
 		cout << "|                                         1. Tim theo ID.                                         |" << endl;
 		cout << "|                                         2. Tim theo ten.                                        |" << endl;
@@ -1107,13 +1107,14 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		system("pause");
 	}
 	//############Quyen 19. Sua thong tin tai khoan ##########################################################
+	//NGHIA SUA GD
 	else if (quyen == 19){
 		system("cls");
 		int luachon;
 		int sl = TruyXuatNgDung(ngDung);
 		fstream outFile("UserData.DAT", ios::out);
 		cout << "_____________________________________________________________________________________________________________" << endl;
-		cout << "|                                      Chon thong tin ban muon thay doi                                     |" << endl;
+		cout << "|.-.-.-.-.-.--.-.-.-.-.-.-.-.-.--.-.-.--.SUA THONG TIN TAI KHOAN.--.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-|" << endl;
 		cout << "|___________________________________________________________________________________________________________|" << endl;
 		cout << "|                                          1. So CMND                                                       |" << endl;
 		cout << "|                                          2. Ten nguoi dung                                                |"<< endl;
