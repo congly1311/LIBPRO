@@ -1133,17 +1133,28 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		return qq;
 	}
 	else if (quyen == 21){
-		system("cls");
-		int ttttt;
-		cout << "ban co muon thoat co(1), khong(0): ";
-		cin >> ttttt;
-		while (ttttt == 1){
-			exit(0);
-		}
-		if (ttttt == 0){
-			Sleep(13);
-		}
-	}
+  system("cls");
+   int ttttt;
+   cout << "ban co muon thoat co(1), khong(0): ";
+   cin >> ttttt;
+   while (ttttt == 1){
+    exit(0);
+   }
+   if (ttttt == 0){
+    Sleep(13);
+   }
+   else
+   {
+    cout << "loi vui long nhap lai lua chon cua ban  ";
+     cin >> ttttt;
+     if (ttttt == 1){
+      exit(0);
+     }
+     else{
+      Sleep(13);
+     }
+   }
+ }
 	return 0;
 }
 
