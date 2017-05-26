@@ -224,7 +224,7 @@ int TruyXuatThongBao(ThongBao v[]) {
 	return dem - 1;
 }
 void CapNhatNgDung(NguoiDung v[]) {
-	int m;
+	double m;
 	fstream outFile("UserData.DAT", ios::app);
 	do {
 		cin.clear();
