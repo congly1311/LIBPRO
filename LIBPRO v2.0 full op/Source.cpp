@@ -112,7 +112,12 @@ public:
 	void nhap();
 };
 void NguoiDung::nhap() {
-	cout << "Nhap ma so CMND: "; cin >> sCMND; cin.ignore();
+	do {
+		cin.clear();
+		cin.ignore(80, '\n');
+		cout << "Nhap so CMND :";
+	} while (!(cin >> sCMND) || sCMND != (int)sCMND);
+	cin.ignore();
 	cout << "Nhap ho ten: "; cin.getline(tenNguoiDung, 30);
 	cout << "Nhap ngay sinh: "; cin.getline(ngaySinh, 12);
 	cout << "Nhap dia chi: "; cin.getline(diaChi, 20);
