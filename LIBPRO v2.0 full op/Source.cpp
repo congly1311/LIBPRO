@@ -38,11 +38,6 @@ void ThongBao::ghi(fstream &ofs) {
 void ThongBao::doc(fstream &ifs) {
 	ifs.read(reinterpret_cast< char * > (this), sizeof(ThongBao));
 }
-void ThongBao::nhap() {
-	cout << "Nhap ID nguoi nhan: "; cin >> IDnhan; cin.ignore();
-	cout << "Nhap tieu de(<100 ky tu): "; cin.getline(tieude, 100);
-	cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(noidung, 100);
-};
 class Sach{
 public:
 	int ID;
@@ -79,7 +74,7 @@ public:
 	char theloai[20];
 	bool trangthai = 1;//chua muon
 	float danhgia = 0; // thang 10, bang tong diem danh gia chia so luot danh gia;
-	
+
 	int IDmuon;
 	char ngMuon[30];
 	int ngayMuon[3]; // dinh dang ngay thang nam.
@@ -114,7 +109,7 @@ public:
 void NguoiDung::nhap() {
 	do {
 		cin.clear();
-		cin.ignore(80, '\n');
+		//cin.ignore(80, '\n');
 		cout << "Nhap so CMND :";
 	} while (!(cin >> sCMND) || sCMND != (int)sCMND);
 	cin.ignore();
@@ -122,7 +117,7 @@ void NguoiDung::nhap() {
 	do {
 		cout << "Nhap Ho Ten: "; cin.getline(tenNguoiDung, 30);
 		if (strcmp(tenNguoiDung, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
-	} while (strcmp(tenNguoiDung, "")==0);
+	} while (strcmp(tenNguoiDung, "") == 0);
 
 	do {
 		cout << "Nhap Ngay Sinh: "; cin.getline(ngaySinh, 30);
@@ -135,7 +130,7 @@ void NguoiDung::nhap() {
 	do {
 		cout << "Nhap Ten Tai Khoan: "; cin.getline(tenDangNhap, 30);
 		if (strcmp(tenDangNhap, "") == 0) cout << "Khong Duoc Bo trong Phan Nay!!!" << endl;
-	} while (strcmp(tenDangNhap, "") == 0); 
+	} while (strcmp(tenDangNhap, "") == 0);
 
 	do {
 		cout << "Nhap Mat khau: "; cin.getline(MatKhau, 30);
@@ -146,7 +141,7 @@ void NguoiDung::nhap() {
 		cin.clear();
 		cin.ignore();
 		cout << "Nhap Ma Chuc Vu (1: Adminstration , 2: Thu Thu , 3:Doc Gia):";
-	} ;
+	};
 };
 void NguoiDung::ghi(fstream &ofs) {
 	ofs.write(reinterpret_cast< const char * > (this), sizeof(NguoiDung));
@@ -281,6 +276,7 @@ int timkiemchuoi(char a[], char b[]){
 	if (ret == NULL) return 0;
 	else return 1;
 }
+
 void ThongBaoTuDong(NguoiDung ngDung[], int hientai, ThongBao thongbao[], int ms, MuonSach muonsach[]){
 	int sl = TruyXuatThongBao(thongbao);
 	int m = TruyXuatNgDung(ngDung);
@@ -297,7 +293,7 @@ void ThongBaoTuDong(NguoiDung ngDung[], int hientai, ThongBao thongbao[], int ms
 	strcpy(thongbao[sl].time, buffer);
 	thongbao[sl].IDgui == -1;
 	if (ms == 1){  // thong bao chao mung
-		thongbao[sl].IDnhan = ngDung[m-1].sCMND;
+		thongbao[sl].IDnhan = ngDung[m - 1].sCMND;
 		strcpy(thongbao[sl].tieude, "Chao mung ban den voi thu vien cua chung toi");
 		strcpy(thongbao[sl].noidung, "Xin chao ");
 		strcat(thongbao[sl].noidung, ngDung[m - 1].tenNguoiDung);
@@ -308,7 +304,7 @@ void ThongBaoTuDong(NguoiDung ngDung[], int hientai, ThongBao thongbao[], int ms
 		strcpy(thongbao[sl].tieude, "Muon sach thanh cong!");
 		strcpy(thongbao[sl].noidung, "Chuc mung ban da muon thanh cong sach ");
 		strcat(strcat(strcat(thongbao[sl].noidung, muonsach[sls - 1].tensach), " vao luc "), buffer);
-		
+
 		strcat(thongbao[sl].noidung, ". Ban phai tra sach muon nhat la sau 15 ngay ke tu ngay muon sach. Xin cam on. ");
 	}
 	else if (ms == 3){ // thong bao tra sach thanh cong
@@ -465,7 +461,7 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	}
 
 	//#######Quyen 5. Tim sach ##############################################################################
-//sua giao dien nghia
+	//sua giao dien nghia
 	else if (quyen == 5) {
 		system("cls");
 		double op;
@@ -478,13 +474,13 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		cout << "|                                2. Tim theo ten sach                                  |" << endl;
 		cout << "|                                3. Tim theo ten tac gia                               |" << endl;
 		cout << "|______________________________________________________________________________________|" << endl;
-		cout << "Nhap Lua Chon :"<<endl;
-			do {
-				cin.clear();
-				cin.ignore(80, '\n');
-				cout << "Nhap Lua Chon :";
-			} while (!(cin >> op) || op!= (int)op);
-			cin.ignore();
+		cout << "Nhap Lua Chon :" << endl;
+		do {
+			cin.clear();
+			cin.ignore(80, '\n');
+			cout << "Nhap Lua Chon :";
+		} while (!(cin >> op) || op != (int)op);
+		cin.ignore();
 		switch ((int)op){
 		case 1:{
 				   system("cls");
@@ -793,10 +789,12 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		else {
 			cout << "Nhap ma so thong bao de xem, nhap 0 de thoat." << endl;
 			cout << "Nhap lua chon: "; cin >> op; cin.ignore();
-			for (int i = 0; i < sl; i++){
-				if (ngDung[hientai].sCMND == thongbao[i].IDnhan){
-					if (thongbao[i].IDthongbao == op){
-						cout << thongbao[i].noidung << endl;
+			if (op != 0){
+				for (int i = 0; i < sl; i++){
+					if (ngDung[hientai].sCMND == thongbao[i].IDnhan){
+						if (thongbao[i].IDthongbao == op){
+							cout << thongbao[i].noidung << endl;
+						}
 					}
 				}
 			}
@@ -831,7 +829,7 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	}
 
 	//########## quyen 13. Tim kiem tai khoan ###############################################################
-//nghia sua gd
+	//nghia sua gd
 	else if (quyen == 13) {
 		system("cls");
 		int op;
@@ -975,24 +973,239 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 	//##########Quyen 14. Tao thong bao #################################################
 
 	else if (quyen == 14){
+		int op;
 		int sl = TruyXuatThongBao(thongbao);
-		thongbao[sl].IDgui = ngDung[hientai].chucVu;
-		thongbao[sl].IDthongbao = sl + 1;
-		thongbao[sl].nhap();
-		time_t rawtime;
-		struct tm *info;
-		char buffer[50];
+		//thongbao[sl].IDgui = ngDung[hientai].chucVu;
+		cout << "Chon doi tuong gui:" << endl;
+		cout << "1. Ca nhan." << endl;
+		cout << "2. Nhom nguoi." << endl;
+		cout << "3. Tat ca Admin." << endl;
+		cout << "4. Tat ca thu thu." << endl;
+		cout << "5. Tat ca doc gia." << endl;
+		cout << "6. Toan bo nguoi dung." << endl;
+		cout << "Lua chon: "; cin >> op; cin.ignore();
+		switch (op){
+		case 1: {
+					system("cls");
+					thongbao[sl].IDthongbao = sl + 1;
+					thongbao[sl].IDgui = ngDung[hientai].chucVu;
+					cout << "Nhap ID nguoi nhan: "; cin >> thongbao[sl].IDnhan; cin.ignore();
+					cout << "Nhap tieu de(<100 ky tu): "; cin.getline(thongbao[sl].tieude, 100);
+					cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(thongbao[sl].noidung, 100);
+					time_t rawtime;
+					struct tm *info;
+					char buffer[50];
 
-		time(&rawtime);
+					time(&rawtime);
 
-		info = localtime(&rawtime);
+					info = localtime(&rawtime);
 
-		strftime(buffer, 80, "%x - %I:%M%p", info);
-		strcpy(thongbao[sl].time, buffer);
-		fstream outFile("ThongBao.DAT", ios::app);
-		thongbao[sl].ghi(outFile);
-		outFile.close();
-		system("pause");
+					strftime(buffer, 80, "%x - %I:%M%p", info);
+					strcpy(thongbao[sl].time, buffer);
+					fstream outFile("ThongBao.DAT", ios::app);
+					thongbao[sl].ghi(outFile);
+					outFile.close();
+					cout << "Gui thanh cong!" << endl;
+					Sleep(1311);
+					break;
+		}
+		case 2:{
+				   system("cls");
+				   int sln = 0;
+				   char td[100];
+				   char nd[1000];
+				   
+				   cout << "Nhap tieu de(<100 ky tu): "; cin.getline(td, 100);
+				   cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(nd, 1000);
+				   cout << "Nhap so luong nguoi nhan: "; cin >> sln;
+				   int* nguoinhan = new int[sln];
+				   cin.ignore();
+				   cout << "Nhap ID nguoi nhan, cach nhau mot khoang trang : "; 
+				   for (int i = 0; i < sln; i++){
+					   cin >> nguoinhan[i];
+					   thongbao[sl+i].IDgui = ngDung[hientai].chucVu;
+					   thongbao[sl+i].IDthongbao = sl + i + 1;
+					   thongbao[sl + i].IDnhan = nguoinhan[i];
+					   strcpy(thongbao[sl + i].tieude, td);
+					   strcpy(thongbao[sl + i].noidung, nd);
+
+					   time_t rawtime;
+					   struct tm *info;
+					   char buffer[50];
+
+					   time(&rawtime);
+
+					   info = localtime(&rawtime);
+
+					   strftime(buffer, 80, "%x - %I:%M%p", info);
+					   strcpy(thongbao[sl+i].time, buffer);
+					   fstream outFile("ThongBao.DAT", ios::app);
+					   thongbao[sl+i].ghi(outFile);
+					   outFile.close();
+				   }
+				   cout << "Gui thanh cong!" << endl;
+				   delete[] nguoinhan;
+				   Sleep(1311);
+				   break;
+		}
+		case 3:{
+				   system("cls");
+				   int slnd = TruyXuatNgDung(ngDung);
+				   int dem = 0;
+
+				   char td[100];
+				   char nd[1000];
+				   cout << "Nhap tieu de(<100 ky tu): "; cin.getline(td, 100);
+				   cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(nd, 1000);
+				   for (int i = 0; i < slnd; i++){
+					   if (ngDung[i].chucVu == 1){
+						   thongbao[sl+dem].IDgui = ngDung[hientai].chucVu;
+						   thongbao[sl +dem].IDthongbao = sl + dem+1;
+						   thongbao[sl + dem].IDnhan = ngDung[i].sCMND;
+						   strcpy(thongbao[sl + dem].tieude, td);
+						   strcpy(thongbao[sl + dem].noidung, nd);
+
+						   time_t rawtime;
+						   struct tm *info;
+						   char buffer[50];
+
+						   time(&rawtime);
+
+						   info = localtime(&rawtime);
+
+						   strftime(buffer, 80, "%x - %I:%M%p", info);
+						   strcpy(thongbao[sl + dem].time, buffer);
+						   fstream outFile("ThongBao.DAT", ios::app);
+						   thongbao[sl + dem].ghi(outFile);
+						   outFile.close();
+						   dem++;
+					   }
+					 
+				   }
+				   cout << "Gui thanh cong!" << endl;
+				   Sleep(1311);
+				   break;
+		}
+		case 4:{
+				   system("cls");
+				   int slnd = TruyXuatNgDung(ngDung);
+				   int dem = 0;
+
+				   char td[100];
+				   char nd[1000];
+				   cout << "Nhap tieu de(<100 ky tu): "; cin.getline(td, 100);
+				   cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(nd, 1000);
+				   for (int i = 0; i < slnd; i++){
+					   if (ngDung[i].chucVu == 2){
+						   thongbao[sl+dem].IDgui = ngDung[hientai].chucVu;
+						   thongbao[sl + dem].IDthongbao = sl + dem + 1;
+						   thongbao[sl + dem].IDnhan = ngDung[i].sCMND;
+						   strcpy(thongbao[sl + dem].tieude, td);
+						   strcpy(thongbao[sl + dem].noidung, nd);
+
+						   time_t rawtime;
+						   struct tm *info;
+						   char buffer[50];
+
+						   time(&rawtime);
+
+						   info = localtime(&rawtime);
+
+						   strftime(buffer, 80, "%x - %I:%M%p", info);
+						   strcpy(thongbao[sl + dem].time, buffer);
+						   fstream outFile("ThongBao.DAT", ios::app);
+						   thongbao[sl + dem].ghi(outFile);
+						   outFile.close();
+						   dem++;
+					   }
+
+				   }
+				   cout << "Gui thanh cong!" << endl;
+				   Sleep(1311);
+				   break;
+		}
+		case 5:{
+				   system("cls");
+				   int slnd = TruyXuatNgDung(ngDung);
+				   int dem = 0;
+
+				   char td[100];
+				   char nd[1000];
+				   cout << "Nhap tieu de(<100 ky tu): "; cin.getline(td, 100);
+				   cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(nd, 1000);
+				   for (int i = 0; i < slnd; i++){
+					   if (ngDung[i].chucVu == 3){
+						   thongbao[sl+dem].IDgui = ngDung[hientai].chucVu;
+						   thongbao[sl + dem].IDthongbao = sl + dem + 1;
+						   thongbao[sl + dem].IDnhan = ngDung[i].sCMND;
+						   strcpy(thongbao[sl + dem].tieude, td);
+						   strcpy(thongbao[sl + dem].noidung, nd);
+
+						   time_t rawtime;
+						   struct tm *info;
+						   char buffer[50];
+
+						   time(&rawtime);
+
+						   info = localtime(&rawtime);
+
+						   strftime(buffer, 80, "%x - %I:%M%p", info);
+						   strcpy(thongbao[sl + dem].time, buffer);
+						   fstream outFile("ThongBao.DAT", ios::app);
+						   thongbao[sl + dem].ghi(outFile);
+						   outFile.close();
+						   dem++;
+					   }
+
+				   }
+				   cout << "Gui thanh cong!" << endl;
+				   Sleep(1311);
+				   break;
+		}
+		case 6:{
+				   system("cls");
+				   int slnd = TruyXuatNgDung(ngDung);
+				   int dem = 0;
+
+				   char td[100];
+				   char nd[1000];
+				   cout << "Nhap tieu de(<100 ky tu): "; cin.getline(td, 100);
+				   cout << "Nhap noi dung(<1000 ky tu): "; cin.getline(nd, 1000);
+				   for (int i = 0; i < slnd; i++){
+					   thongbao[sl+i].IDgui = -1;
+						   thongbao[sl+i].IDthongbao = sl +i+ 1;
+						   thongbao[sl + i].IDnhan = ngDung[i].sCMND;
+						   strcpy(thongbao[sl + i].tieude, td);
+						   strcpy(thongbao[sl + i].noidung, nd);
+
+						   time_t rawtime;
+						   struct tm *info;
+						   char buffer[50];
+
+						   time(&rawtime);
+
+						   info = localtime(&rawtime);
+
+						   strftime(buffer, 80, "%x - %I:%M%p", info);
+						   strcpy(thongbao[sl + i].time, buffer);
+						   fstream outFile("ThongBao.DAT", ios::app);
+						   thongbao[sl + i].ghi(outFile);
+						   outFile.close();
+				
+					   
+
+				   }
+				   cout << "Gui thanh cong!" << endl;
+				   Sleep(1311);
+				   break;
+		}
+		default:{
+					cout << "Khong co lua chon nay. Quay laij menu chinh!" << endl;
+					Sleep(1311);
+					break;
+		}
+		}
+		
 	}
 
 	//##########//Quyen 15. Sua thong tin sach ##########################################
@@ -1097,18 +1310,18 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		system("cls");
 		char ql;
 		cout << " ____________________________________________________________________________________________________________________" << endl;
-		cout <<"|"<< setw(13) << left << "So CMND" <<"|"<< setw(28) << left << "Ho va ten" <<"|"<< setw(15) << left << "Ngay sinh" <<"|"<< setw(20) << left << "Dia chi" <<"|"<< setw(20) << left << "Chuc vu" <<"|"<< setw(15) << left << "Trang thai" <<"|"<< endl;
+		cout << "|" << setw(13) << left << "So CMND" << "|" << setw(28) << left << "Ho va ten" << "|" << setw(15) << left << "Ngay sinh" << "|" << setw(20) << left << "Dia chi" << "|" << setw(20) << left << "Chuc vu" << "|" << setw(15) << left << "Trang thai" << "|" << endl;
 		cout << "|_____________|____________________________|_______________|____________________|____________________|_______________|" << endl;
 		m = TruyXuatNgDung(ngDung);
 		for (int i = 0; i < m; i++) {
-			cout <<"|"<< setw(13) << left << ngDung[i].sCMND <<"|"<< setw(28) << left << ngDung[i].tenNguoiDung <<"|"<< setw(15) << left << ngDung[i].ngaySinh <<"|"<< setw(20) << left << ngDung[i].diaChi <<"|"<< setw(20) << left;
-			if (ngDung[i].chucVu == 1) cout << "Administration"<<"|";
-			else if (ngDung[i].chucVu == 2) cout << "Thu Thu"<<"|";
-			else cout << "Doc Gia"<<"|";
+			cout << "|" << setw(13) << left << ngDung[i].sCMND << "|" << setw(28) << left << ngDung[i].tenNguoiDung << "|" << setw(15) << left << ngDung[i].ngaySinh << "|" << setw(20) << left << ngDung[i].diaChi << "|" << setw(20) << left;
+			if (ngDung[i].chucVu == 1) cout << "Administration" << "|";
+			else if (ngDung[i].chucVu == 2) cout << "Thu Thu" << "|";
+			else cout << "Doc Gia" << "|";
 			cout << setw(15) << left;
-			if (ngDung[i].trangThai == 1) cout << "Hoat Dong" << "|"<<endl;
-			else cout << "Bi khoa" <<"|"<< endl;
-			}
+			if (ngDung[i].trangThai == 1) cout << "Hoat Dong" << "|" << endl;
+			else cout << "Bi khoa" << "|" << endl;
+		}
 		cout << "|_____________|____________________________|_______________|____________________|____________________|_______________|" << endl;
 		system("pause");
 	}
@@ -1123,7 +1336,7 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		cout << "|.-.-.-.-.-.--.-.-.-.-.-.-.-.-.--.-.-.--.SUA THONG TIN TAI KHOAN.--.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-|" << endl;
 		cout << "|___________________________________________________________________________________________________________|" << endl;
 		cout << "|                                          1. So CMND                                                       |" << endl;
-		cout << "|                                          2. Ten nguoi dung                                                |"<< endl;
+		cout << "|                                          2. Ten nguoi dung                                                |" << endl;
 		cout << "|                                          3. Ngay sinh                                                     |" << endl;
 		cout << "|                                          4. Dia chi                                                       |" << endl;
 		cout << "|                                          5. Ten tai khoan                                                 |" << endl;
@@ -1174,7 +1387,7 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		outFile.close();
 		Sleep(2000);
 	}
-	
+
 	//##########//Quyen 20. Dang xuat.#########################################################################3##
 
 	else if (quyen == 20) {
@@ -1185,28 +1398,28 @@ int Chucnang(int hientai, NguoiDung ngDung[], int quyen, int &m, Quyen q[], char
 		return qq;
 	}
 	else if (quyen == 21){
-  system("cls");
-   int ttttt;
-   cout << "ban co muon thoat co(1), khong(0): ";
-   cin >> ttttt;
-   while (ttttt == 1){
-    exit(0);
-   }
-   if (ttttt == 0){
-    Sleep(13);
-   }
-   else
-   {
-    cout << "loi vui long nhap lai lua chon cua ban  ";
-     cin >> ttttt;
-     if (ttttt == 1){
-      exit(0);
-     }
-     else{
-      Sleep(13);
-     }
-   }
- }
+		system("cls");
+		int ttttt;
+		cout << "ban co muon thoat co(1), khong(0): ";
+		cin >> ttttt;
+		while (ttttt == 1){
+			exit(0);
+		}
+		if (ttttt == 0){
+			Sleep(13);
+		}
+		else
+		{
+			cout << "loi vui long nhap lai lua chon cua ban  ";
+			cin >> ttttt;
+			if (ttttt == 1){
+				exit(0);
+			}
+			else{
+				Sleep(13);
+			}
+		}
+	}
 	return 0;
 }
 
@@ -1323,7 +1536,7 @@ int main() {
 			}
 		} while (kt != 1);
 		do {
-			int ch=0;
+			int ch = 0;
 			system("cls");
 			switch (chucvu) {
 			case 1: {
@@ -1341,14 +1554,14 @@ int main() {
 							}
 						}
 						cout << "|________________________________________________________________|" << endl;
-				while(ch==0){
-						cout << "Nhap Lua chon: "; cin >> op;
-						if (quyen[op].Admin == 1) {
-						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
-						ch = 1;
-					}
-					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
-				}
+						while (ch == 0){
+							cout << "Nhap Lua chon: "; cin >> op;
+							if (quyen[op].Admin == 1) {
+								kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+								ch = 1;
+							}
+							else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+						}
 						break;
 			}
 			case 2: {
@@ -1366,14 +1579,14 @@ int main() {
 							}
 						}
 						cout << "|________________________________________________________________|" << endl;
-				while(ch==0){
-						cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
-					if (quyen[op].ThuThu == 1) {
-						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
-						ch = 1;
-					}
-					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
-				}
+						while (ch == 0){
+							cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
+							if (quyen[op].ThuThu == 1) {
+								kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+								ch = 1;
+							}
+							else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+						}
 						break;
 			}
 			default: {
@@ -1391,14 +1604,14 @@ int main() {
 							 }
 						 }
 						 cout << "|________________________________________________________________|" << endl;
-				while(ch==0){
-						cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
-						if (quyen[op].DocGia == 1) {
-						kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
-						ch = 1;
-					}
-					else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
-				}
+						 while (ch == 0){
+							 cout << "Nhap Lua chon: "; cin >> op; cin.ignore();
+							 if (quyen[op].DocGia == 1) {
+								 kt = Chucnang(taikhoanhientai, ngDung, op, m, quyen, tdn, sach, muonsach, thongbao);
+								 ch = 1;
+							 }
+							 else cout << "Ban khong duoc ho tro chuc nang nay" << endl;
+						 }
 						 break;
 			}
 			}
