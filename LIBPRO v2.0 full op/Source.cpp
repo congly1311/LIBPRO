@@ -1718,6 +1718,24 @@ int main() {
 		int op;
 		//cout << m << endl;
 		char user[30], pass[20];
+		cout << endl << endl << endl;
+		cout << "                            *           *  * * * *  *          * * *    * * *    **       **" << endl;
+		cout << "                             *         *   *        *        *        *       *  *  *   *  *" << endl;
+		cout << "                              *   *   *    * * *    *        *        *       *  *    *    *" << endl;
+		cout << "                               * * * *     *        *        *        *       *  *         *"<< endl;
+		cout << "                                *   *      * * * *  * * * *    * * *    * * *    *         *" << endl << endl;
+		cout << "                                                    * * * * *    * * *" << endl;
+		cout << "                                                        *      *       *" << endl;
+		cout << "                                                        *      *       *" << endl;
+		cout << "                                                        *      *       *" << endl;
+		cout << "                                                        *        * * *" << endl << endl;
+		cout << "                                    *        *  * * *    * * *    * * *      * * *" << endl;
+		cout << "                                    *        *  *     *  *     *  *     *  *       *" << endl;
+		cout << "                                    *        *  *   **   * * *    *  * *   *       *" << endl;
+		cout << "                                    *        *  *     *  *        *     *  *       *" << endl;
+		cout << "                                    * * * *  *  * * *    *        *     *    * * *" << endl;
+		Sleep(5000);
+		system("cls");
 		do {
 			cout << "################Dang Nhap################" << endl;
 			cout << "Ten Dang Nhap: "; cin.getline(user, 30);
